@@ -7,5 +7,6 @@
 
 for var in $@
 do
-	touch $var{.hpp,.cpp}
+	nvim -c "AddHeader" -c wq $var.hpp
+	nvim -c "AddHeader" -c wq $var.cpp
 done
