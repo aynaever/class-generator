@@ -16,7 +16,14 @@ do
 
 	echo -e \
 		"class	${classC}\n\
-		{\n}\n" >> $classC.hpp
+{\n\
+private:\n\
+public:\n\
+\t${classC} ( void );\n\
+\t~${classC} ( void );\n\
+\t${classC} ( const ${classC}& ${classC,,} );\n\
+\t${classC} operator=( const ${classC}& ${classC,,} );\n\
+}\n" >> $classC.hpp
 
 	nvim -c "AddHeader" -c wq $classC.hpp
 	nvim -c "AddHeader" -c wq $classC.cpp
