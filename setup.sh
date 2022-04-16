@@ -5,7 +5,9 @@
 # Last Modified Date: 16.04.2022
 # Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
 
-bash -c "./class.sh $@"
+echo $@
+echo $#
+./class.sh $@
 
 for var in $@
 do
