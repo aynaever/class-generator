@@ -1,6 +1,6 @@
 # C++ Class Generator
 
-A Shell script that automate the creation of c++ classes in Orthodox Canonical Form.
+A Shell script that automate the creation of c++ classes in Orthodox Canonical Form with a Makefile generator.
 
 ## Table of contents
 * [How to use it ?](#use)
