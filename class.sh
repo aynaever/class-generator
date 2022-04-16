@@ -28,6 +28,9 @@ public:\n\
 \t${classC} operator=( const ${classC}& ${classC,,} );\n\
 }\n" >> $classC.hpp
 
+	# Write in the header file the endif
+	echo "#endif" >> $classC.hpp
+
 	# Write in the .cpp file the function implementation
 	echo -e \
 "\n${classC}::${classC} ( void ) { }\n\
