@@ -7,6 +7,17 @@
 
 for var in $@
 do
-	nvim -c "AddHeader" -c wq $var.hpp
-	nvim -c "AddHeader" -c wq $var.cpp
+	classU=${var^^}
+	classC=${var^}
+
+	echo -e \
+		"\n#ifndef	${classU}_HPP\n\
+#ifdef	${classU}_HPP\n" >> $classC.hpp
+
+	echo -e \
+		"class	${classC}\n\
+		{\n}\n" >> $classC.hpp
+
+	nvim -c "AddHeader" -c wq $classC.hpp
+	nvim -c "AddHeader" -c wq $classC.cpp
 done
