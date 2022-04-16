@@ -5,6 +5,7 @@
 # Last Modified Date: 15.04.2022
 # Last Modified By  : Aymane N <anaouadi@students.42wolfsburg.de>
 
+# loop through arguments
 for var in $@
 do
 	# Get the class name in Uppercase and Capitalized from filename
@@ -33,11 +34,12 @@ public:\n\
 
 	# Write in the .cpp file the function implementation
 	echo -e \
-"\n${classC}::${classC} ( void ) { }\n\
+"\n#include	\"${classC}.hpp\"\n\n\
+${classC}::${classC} ( void ) { }\n\
 ${classC}::~${classC} ( void ) { }\n\
 ${classC}::${classC} ( const ${classC}& ${classC,,} ) { }\n\
 ${classC}::${classC} operator=( const ${classC}& ${classC,,} ) { }\n\n\
-}" >> $classC.cpp
+" >> $classC.cpp
 
 	# Add headers both in .hpp and .cpp files
 	nvim -c "AddHeader" -c wq $classC.hpp
