@@ -9,6 +9,8 @@ Write the names of classes that you want to create in arguments, the script will
 
 Also, the script will automatically insert a Header trough the AddHeader command in nvim ( from a plugin ), you can comment the two lines in the script if you are not using it.
 
+To note, the script will always capitalize the name of classes in the creation of files and also in naming them in definitions.
+
 ## Example
 The following command `./class.sh	classA classB`, it will create:
 
