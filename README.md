@@ -27,3 +27,6 @@ with classes' definitions and declarations as it's shown in screenshots below:
 
 * ClassA.cpp
 ![clasAcpp](./screenshots/classAcpp.png)
+
+* ClassB.hpp and ClassB.cpp
+![classB](./screenshots/classB.png)
