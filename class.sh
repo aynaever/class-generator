@@ -15,7 +15,7 @@ do
 	# Write in the header file the definition guards
 	echo -e \
 		"\n#ifndef	${classU}_HPP\n\
-#ifdef	${classU}_HPP\n" >> $classC.hpp
+#define	${classU}_HPP\n" >> $classC.hpp
 
 	# Write in the header file the class Definition
 	echo -e \
@@ -27,7 +27,7 @@ public:\n\
 \t~${classC} ( void );\n\
 \t${classC} ( const ${classC}& ${classC,,} );\n\
 \t${classC} operator=( const ${classC}& ${classC,,} );\n\
-}\n" >> $classC.hpp
+};\n" >> $classC.hpp
 
 	# Write in the header file the endif
 	echo "#endif" >> $classC.hpp
